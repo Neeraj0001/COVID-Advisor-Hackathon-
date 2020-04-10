@@ -1,0 +1,167 @@
+
+{% extends 'basic.html' %}
+{% block title %} Fun {% endblock %}
+{% block head %}
+<style>
+    .mySlides {
+        display:none;
+        padding:5px;
+    }
+    .mySlides1 {
+        display:none;
+        padding:5px;
+        
+    }
+    .change{
+        color:red;
+    }
+</style>
+{% endblock %}
+{% block body %}
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky" >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03" >
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link" href="/home/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/meter/">Covid-O-Meter</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/message/">Message</a>
+          </li>
+          
+        <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Other
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/news/">News</a>
+              <a class="dropdown-item" href="/h_no/">Helpline Number</a>
+              <a class="dropdown-item" href="/form/">Donation</a>
+              <a class="dropdown-item" href="/fun/">Fun</a>
+            
+               
+            
+            </div>
+          </li>
+      </ul>
+      <i class='far fa-user' style='font-size:36px;'></i>
+      <div>Hello {{user}} !!</div>
+    </div>
+  </nav>
+      <br>
+      <div class="container" style="text-align:center;">
+        <h2><u>Knowledge with Fun </u></h2>
+    </div>
+<br>
+    <div class="container" style="padding:0.5cm 3cm;">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{% static 'icon.png' %}">
+            </div>
+            <div class="col-md-9" style="padding:20px;text-align:center;border-bottom:1px solid black;border-top:1px solid black">
+                
+                <h2 style="float:left;width:10cm;border-right:1px solid black;">1). Go_Corono_Quiz</h2>
+            
+            
+                <a href="https://drive.google.com/open?id=1W_F4m-8HbHf_vHCC6iKjPGd7mlrogI_S"><button type="button" class="btn btn-primary" style="margin-left:2cm;">Download</button></a>
+                <br>
+                <br>
+
+                <p >
+                    One of the best Game which we play during Quarantine
+                </p>
+                <p>
+                    #STAY HOME #STAY SAFE
+                </p>
+            </div>
+            </div>
+        </div>
+        <h4 style="text-align:center;">Gameplay Screenshot</h4>
+        <div class="container">
+                        <div class="row">
+
+                <div class="col-md-1">
+                <button type="submit" class="btn btn-dark btn-lg" onclick="plusDivs(-1)" style="margin-top:6cm">&#10094</button></div>
+                <div class="col-md-10">
+                <img class="mySlides" src="{% static '21.jpeg' %}" style="width:100%; height:15cm;">
+                <img class="mySlides" src="{% static '31.jpeg' %}" style="width:100%; height:15cm;">
+                <img class="mySlides" src="{% static '41.jpeg' %}" style="width:100%; height:15cm;">
+                <img class="mySlides" src="{% static '51.jpeg' %}" style="width:100%; height:15cm;">
+     
+                
+                </div>
+                <div class="col-md-1">
+                <button type="submit" class="btn btn-dark btn-lg" onclick="plusDivs(1)" style="margin-top:6cm">&#10095</button></div>
+        
+        <br>
+    <div class='col-md-1'></div>
+    <div class="col-md-10" style="text-align:center; margin-top:1cm;">
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(1)" >1</button>
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(2)" >2</button>
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(3)" >3</button>
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(4)" >4</button>
+
+    
+
+</div>
+<div class='col-md-1'></div>
+</div>  
+
+
+
+
+
+    </div>
+      <br>
+
+
+
+
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+ 
+
+      var dots = document.getElementsByClassName("ss");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("change", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+    
+      dots[slideIndex-1].className += "change";
+    }
+</script>
+
+
+
+
+
+{% endblock %}

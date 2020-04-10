@@ -1,0 +1,265 @@
+{% extends 'basic.html' %}
+{% block title %} Home {% endblock %}
+{% block head %}
+<style>
+    .mySlides {
+        display:none;
+        padding:5px;
+    }
+    .mySlides1 {
+        display:none;
+        padding:5px;
+        
+    }
+    .change{
+        color:red;
+    }
+    .mySlides2 {
+        padding:5px;
+        display:none;
+    }
+    .mySlides3 {
+        padding:5px;
+        display:none;
+    }
+   
+</style>
+{% endblock %}
+{% block body %}
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky" >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03" >
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/meter/">Covid-O-Meter</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/message/">Message</a>
+          </li>
+          
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Other
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/news/">News</a>
+              <a class="dropdown-item" href="/h_no/">Helpline Number</a>
+              <a class="dropdown-item" href="/form/">Donation</a>
+              <a class="dropdown-item" href="/fun/">Fun</a>
+            
+               
+            
+            </div>
+          </li>
+      </ul>
+      <i class='far fa-user' style='font-size:36px;'></i>
+      <div>Hello {{user}} !!</div>
+    </div>
+  </nav>
+      <br>
+    <div class="container ">
+        <div class="row">
+          
+            <div class="col-sm-6">
+     <img src="{% static 'img1.jpg' %}" class="img-fluid" alt="Responsive image" style="border-radius:25px;height:15cm;">
+</div>
+
+<div class="col-sm-6" style="background-color:white;">
+<div style="margin-top:5cm;"><h3>WHO declares COVID-19 disease to be a pandemic</h3></div>
+<div>The coronavirus crisis continues to unfold across the globe as the World Health Organization uses the word for the first time.</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="container ">
+    <div class="row">
+        
+      
+<div class="col-sm-6" style="background-color:white;">
+<div style="margin-top:5cm;"><h3>WHO Country Office for India support</h3></div>
+<div>WHO Country Office for India has been working closely with MoHFW on preparedness and response measures for COVID-19, including surveillance and contact tracing, laboratory diagnosis, risk communications and community engagement, hospital preparedness, infection prevention and control, and implementation of containment plan. </div>
+</div>
+<div class="col-sm-6">
+    <img src="{% static 'img2.jpg' %}" class="img-fluid" alt="Responsive image" style="border-radius:25px;height:15cm;">
+    </div>
+
+</div>
+</div>
+   
+<div class="container">
+    <h4> Do's during these pandemic situation COVID-19 </h4>
+    <br>
+    <div class="row">
+        <div class="col-md-1"></div>
+    <div class="col-md-4" style="text-align:center;border:2px solid white;height:auto;background-color:#343a40;color:white;padding:2px;">
+       <b> <div class="mySlides1">1).Follow Social Distance</div>
+        <div class="mySlides1">2).Maintain atleaset 6 Feet Distance</div>
+        <div class="mySlides1">3).Wash your hand Frequently</div>
+        <div class="mySlides1">4).Cover your face with mask</div>
+        <div class="mySlides1">5).Dont follow invalid information</div></b>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+       <br>
+        <div class="row">
+
+        <div class="col-md-1">
+        <button type="submit" class="btn btn-dark btn-lg" onclick="plusDivs(-1)" style="margin-top:6cm">&#10094</button></div>
+        <div class="col-md-10">
+        <img class="mySlides" src="{% static '2.png' %}" style="width:100%; height:15cm;">
+        <img class="mySlides" src="{% static '3.png' %}" style="width:100%; height:15cm;">
+        <img class="mySlides" src="{% static '4.png' %}" style="width:100%; height:15cm;">
+        <img class="mySlides" src="{% static '5.png' %}" style="width:100%; height:15cm;">
+        <img class="mySlides" src="{% static '7.png' %}" style="width:100%; height:15cm;">
+        
+        </div>
+        <div class="col-md-1">
+        <button type="submit" class="btn btn-dark btn-lg" onclick="plusDivs(1)" style="margin-top:6cm">&#10095</button></div>
+        
+        <br>
+    <div class='col-md-1'></div>
+    <div class="col-md-10" style="text-align:center; margin-top:1cm;">
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(1)" >1</button>
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(2)" >2</button>
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(3)" >3</button>
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(4)" >4</button>
+    <button type="submit" class="btn btn-dark btn-lg ss" onclick="currentDiv(5)" >5</button>
+    
+
+</div>
+<div class='col-md-1'></div>
+</div>  
+</div>
+
+<br>
+
+      <br>
+<div class="container">
+    <h4> Don't Do during these pandemic situation COVID-19 </h4>
+    <br>
+    <div class="row">
+        <div class="col-md-1"></div>
+    <div class="col-md-4" style="text-align:center;border:2px solid white;height:auto;background-color:#343a40;color:white;padding:2px;">
+       <b> <div class="mySlides3">1).Social Closening</div>
+        <div class="mySlides3">2).Eat Outside</div>
+        <div class="mySlides3">3).Meeting Elderly</div>
+        <div class="mySlides3">4).Assuming Game</div>
+        </b>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+       <br>
+        <div class="row">
+
+        <div class="col-md-1">
+        <button type="submit" class="btn btn-dark btn-lg" onclick="plusDivs1(-1)" style="margin-top:6cm">&#10094</button></div>
+        <div class="col-md-10">
+        <img class="mySlides2" src="{% static '8.png' %}" style="width:100%; height:15cm;">
+        <img class="mySlides2" src="{% static '9.png' %}" style="width:100%; height:15cm;">
+        <img class="mySlides2" src="{% static '10.png' %}" style="width:100%; height:15cm;">
+        <img class="mySlides2" src="{% static '11.png' %}" style="width:100%; height:15cm;">
+        
+        
+        </div>
+        <div class="col-md-1">
+        <button type="submit" class="btn btn-dark btn-lg" onclick="plusDivs1(1)" style="margin-top:6cm">&#10095</button></div>
+        
+        <br>
+    <div class='col-md-1'></div>
+    <div class="col-md-10" style="text-align:center; margin-top:1cm;">
+    <button type="submit" class="btn btn-dark btn-lg sss" onclick="currentDiv1(1)" >1</button>
+    <button type="submit" class="btn btn-dark btn-lg sss" onclick="currentDiv1(2)" >2</button>
+    <button type="submit" class="btn btn-dark btn-lg sss" onclick="currentDiv1(3)" >3</button>
+    <button type="submit" class="btn btn-dark btn-lg sss" onclick="currentDiv1(4)" >4</button>
+    
+    
+
+</div>
+<div class='col-md-1'></div>
+</div>  
+</div>
+
+<br>
+
+
+
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var y = document.getElementsByClassName("mySlides1");
+
+      var dots = document.getElementsByClassName("ss");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        y[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("change", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      y[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += "change";
+    }
+
+
+
+
+    var slideIndex1 = 1;
+    showDivs1(slideIndex1);
+    
+    function plusDivs1(n) {
+      showDivs1(slideIndex1 += n);
+    }
+    
+    function currentDiv1(n) {
+      showDivs1(slideIndex1 = n);
+    }
+    
+    function showDivs1(n) {
+      var i1;
+      var x1 = document.getElementsByClassName("mySlides2");
+      var y1 = document.getElementsByClassName("mySlides3");
+
+      var dots1 = document.getElementsByClassName("sss");
+      if (n > x1.length) {slideIndex1 = 1}    
+      if (n < 1) {slideIndex1 = x1.length}
+      for (i = 0; i < x1.length; i++) {
+        x1[i].style.display = "none";  
+        y1[i].style.display = "none";  
+      }
+      for (i = 0; i < dots1.length; i++) {
+        dots1[i].className = dots1[i].className.replace("change", "");
+      }
+      x1[slideIndex1-1].style.display = "block";  
+      y1[slideIndex1-1].style.display = "block";  
+      dots1[slideIndex1-1].className += "change";
+    }
+    x1[slideIndex1-1].style.display = "block";  
+    y1[slideIndex1-1].style.display = "block";  
+    dots1[slideIndex-1].className += "change";
+    </script>
+    
+{% endblock %}

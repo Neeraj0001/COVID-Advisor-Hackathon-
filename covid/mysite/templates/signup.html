@@ -1,0 +1,130 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Sign in</title>
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        .bg-image {
+          /* The image used */
+          background-image: url("{% static 'login1.jpg' %}" );
+          
+          /* Add the blur effect */
+          filter: blur(2px);
+          -webkit-filter: blur(2px);
+          
+          /* Full height */
+          height: 100%; 
+          
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        
+        /* Position text in the middle of the page/image */
+        .bg-text {
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+          color: white;
+          font-weight: bold;
+          
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 80%;
+          padding: 20px;
+          
+        }
+        </style>
+  </head>
+  <body>
+    <div class="bg-image"></div>
+
+    <div class="container bg-text">
+      <div class="row">
+        <div class="col-md-6">
+           <h1  style="border-bottom: 2px solid white;width:5cm;">Sign In</h1> 
+        </div>
+        <div class="col-md-6" style="color:white;background-color:rgb(175, 108, 108);">
+          {% for message in messages %}
+          <h3 style="color:white;">{{message}}</h3>
+          {% endfor %}
+        </div>
+      </div>
+        <br>
+        <form action= "/sign_in/"  method="POST">
+          {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputF_Name">First Name</label>
+                  <input name="F_name" class="form-control" id="F_name" type="text">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputL_name">Last Name</label>
+                    <input name="L_name" class="form-control" id="L_name" type="text">
+                  </div>
+              </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input name="email" class="form-control" id="inputEmail4" type="text">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="Phone_no">User Name</label>
+                <input name="username" class="form-control" id="Phone_no" type="text">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" name="password1">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Confirm Password</label>
+                <input type="password" class="form-control" id="inputPassword4" name="password2">
+              </div>
+        </div>
+        
+           
+            <div class="form-group col-md-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  I agree to the term and condition
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
