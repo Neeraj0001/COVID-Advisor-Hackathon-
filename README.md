@@ -4,6 +4,8 @@
   <br>
 This is a web application to fight with the growing epidemic that is effecting not only India but whole world i.e COVID-19.
 This application is designed for 2 user mainly government and general public that are those segment which have to deal with this growing pandemic.
+The system is designed keeping in mind that very less people should go out of their houses.
+  Hence we gave various functionalities so that we as user can access hospital advise and government or any other organisation as user can take donation and provide necessary news to the public.
 <br>
 <h2> Hardware and Software Requirements- <h2>
   <br>
