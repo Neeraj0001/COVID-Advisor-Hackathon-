@@ -21,4 +21,23 @@ Softwares-
       <li>BOOTSTRAP</li></ul>    
 </li>
   </ul>
+  <h2>Process Flow:</h2>
+  <br>
+  <ul>
+  <li>The app opens with home page consisting of user information and covid 19 information and dos and donts we should follow.</li>
+   <li>After that there is a covid-o-meter which shows the extent of covid pandemic in other countries</li>
+       <li>After there is a UI for chat application which can be employed by user to contact  hospital</li>
+       <li>After messages there is other which comprises of four options
+    <ul>
+            <li> First is news so that no fake news is spread only news from trusted source</li>
+         <li>Helpline Number for the emergency cases </li>
+         <li>Donation page to help needy by providing anything</li>
+            <li>Fun page to pass time in quarantine days</li>
+         </ul>
+    </li>
+    
+    
+  </ul>
+  
+    <h2>Data Flow Diagram</h2>
   
